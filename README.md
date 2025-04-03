@@ -96,6 +96,52 @@ All required libraries are included in the `package.json` file. To install the d
 npm install
 ```
 
+### **Manual WASM Library Setup**
+
+This project requires two external libraries that must be manually downloaded and placed in the `lib` folder:
+
+#### **Rangy Library (Text Highlighting)**
+
+1. **Download from official repository:**
+   - Visit [Rangy GitHub repository](https://github.com/timdown/rangy)
+   - Download the latest version (Code → Download ZIP)
+   - Extract the ZIP file
+
+2. **Copy required files:**
+   ```bash
+   mkdir -p lib/rangy
+   cp path/to/extracted/rangy/lib/rangy-core.js lib/rangy/
+   cp path/to/extracted/rangy/lib/rangy-highlighter.js lib/rangy/
+   cp path/to/extracted/rangy/lib/rangy-classapplier.js lib/rangy/
+   ```
+
+#### **SQL.js WASM Library (SQLite in Browser)**
+
+1. **Download from official repository:**
+   - Visit [SQL.js GitHub repository](https://github.com/sql-js/sql.js)
+   - Download the latest release from [Releases page](https://github.com/sql-js/sql.js/releases) (might have to look at older versions for sql-wasm.wasm)
+   - Extract the ZIP file
+
+2. **Copy required files:**
+   ```bash
+   mkdir -p lib/sql-wasm
+   cp path/to/extracted/sql.js/dist/sql-wasm.js lib/sql-wasm/
+   cp path/to/extracted/sql.js/dist/sql-wasm.wasm lib/sql-wasm/
+   ```
+
+3. **Verify your library structure:**
+   ```
+   lib/
+   ├── rangy/
+   │   ├── rangy-core.js
+   │   ├── rangy-highlighter.js
+   │   └── rangy-classapplier.js
+   └── sql-wasm/
+       ├── sql-wasm.js
+       └── sql-wasm.wasm
+   ```
+The project is configured to look for these files in the specified locations. Do not change the directory structure or file names.
+
 ---
 
 ## **Troubleshooting**
