@@ -42,7 +42,7 @@ A **Chrome/Firefox extension** that allows users to highlight and save annotatio
 
 ### **2. Native Messaging Configuration**
 
-To enable communication between the extension and the Python backend, create a native messaging host manifest file:
+To enable communication between the extension and the Python backend, create a native messaging host manifest file (differs for Firefox):
 
 ```json
 {
