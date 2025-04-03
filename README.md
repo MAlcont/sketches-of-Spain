@@ -70,9 +70,7 @@ Save this file to:
 - **macOS:** `~/Library/Application Support/Mozilla/NativeMessagingHosts/com.example.patents.json`
 - **Linux:** `~/.mozilla/native-messaging-hosts/com.example.patents.json`
 
----
-
-## API Token Setup
+###  3. API Token Setup
 
 Obtain an API token from Lens.org and set it as an environment variable:
 
@@ -86,9 +84,7 @@ set LENS_API_KEY=your_secret_token_here
 
 **IMPORTANT:** Never store your API token directly in your code or commit it to version control.
 
----
-
-## **Dependencies**
+###  4. **Dependencies**
 
 All required libraries are included in the `package.json` file. To install the dependencies, simply run:
 
@@ -96,24 +92,7 @@ All required libraries are included in the `package.json` file. To install the d
 npm install
 ```
 
-### **Manual WASM Library Setup**
-
-This project requires two external libraries that must be manually downloaded and placed in the `lib` folder:
-
-#### **Rangy Library (Text Highlighting)**
-
-1. **Download from official repository:**
-   - Visit [Rangy GitHub repository](https://github.com/timdown/rangy)
-   - Download the latest version (Code → Download ZIP)
-   - Extract the ZIP file
-
-2. **Copy required files:**
-   ```bash
-   mkdir -p lib/rangy
-   cp path/to/extracted/rangy/lib/rangy-core.js lib/rangy/
-   cp path/to/extracted/rangy/lib/rangy-highlighter.js lib/rangy/
-   cp path/to/extracted/rangy/lib/rangy-classapplier.js lib/rangy/
-   ```
+This project requires external libraries that must be manually downloaded and placed in the `lib` folder:
 
 #### **SQL.js WASM Library (SQLite in Browser)**
 
@@ -142,6 +121,13 @@ This project requires two external libraries that must be manually downloaded an
    ```
 The project is configured to look for these files in the specified locations. Do not change the directory structure or file names.
 
+###  **5. Initialize the Database**
+
+Run the following script to set up the database:
+
+```bash
+python db_setup.py
+```
 ---
 
 ## **Troubleshooting**
