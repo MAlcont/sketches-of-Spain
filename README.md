@@ -92,7 +92,7 @@ All required libraries are included in the `package.json` file. To install the d
 npm install
 ```
 
-This project requires external libraries that must be manually downloaded and placed in the `lib` folder:
+This project may require external libraries that must be manually downloaded and placed in the `lib` folder:
 
 #### **SQL.js WASM Library (SQLite in Browser)**
 
