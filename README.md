@@ -72,7 +72,7 @@ Save this file to:
 
 ---
 
-## **3. API Token Setup**
+## API Token Setup
 
 Obtain an API token from Lens.org and set it as an environment variable:
 
@@ -85,6 +85,16 @@ set LENS_API_KEY=your_secret_token_here
 ```
 
 **IMPORTANT:** Never store your API token directly in your code or commit it to version control.
+
+---
+
+## **Dependencies**
+
+All required libraries are included in the `package.json` file. To install the dependencies, simply run:
+
+```bash
+npm install
+```
 
 ---
 
